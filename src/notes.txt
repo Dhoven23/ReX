@@ -1,0 +1,7 @@
+main is a command line tool to insult Nick,
+
+usage
+
+./main <insult 1> <insult 2> ... <insult n>
+
+you can call Nick as many names as you'd like,
