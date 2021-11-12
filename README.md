@@ -1,4 +1,24 @@
-# 11/12/2021 - A few thoughts
+# Instructionès
+How to install, start, and update the client and server
+# Prerequisites
+1. Install Node.js
+2. Install VS Code (or use your editor of choice, but vs code has a built in terminal)
+
+## Installation
+Open 2 terminals in VS Code
+In the first terminal:
+...\REX> cd server
+...\REX\server> npm install
+
+in the second terminal:
+...\REX> cd client
+...\REX\client> npm install
+
+## Start
+Open a terminal and run
+...\REX> npm run dev
+
+## 11/12/2021 - A few thoughts
 Game On, Allow me to Rebuttle!
 
 1. How far down the hypervisor rabbit hole do we go? because I'm all for building out a distributed system that learns the most successful configuration from previous experience and predicts the most successfull 'relative_network' of nodes relative to the 'requesting node'.
@@ -14,11 +34,11 @@ Stability
 Consistency (same as stability?)
 success in future predictions
 
-# 11/10/2021 - First Commit
+## 11/10/2021 - First Commit
 Code Repo for ReX, (Robust eXa-scale computing)
 
 please do not use for real rockets
 
-also Nick Stein Sucks Biiiiiiig Fat thiiiiiiqqqqqq juicy Monkey swingers.......
+also Nick Stine  Sucks Biiiiiiig Fat thiiiiiiqqqqqq juicy Monkey swingers.......
 
 #####################################
