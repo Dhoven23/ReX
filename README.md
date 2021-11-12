@@ -38,6 +38,8 @@ to handle dynamic networks (a distributed system where a new node being added, a
 
 3. How is it preditive? you train a local NN with the wavelet coefficients as inputs, (essentially a modified DMD) and the future coefficients as outputs. Since these coefficients are multiscale, they capture predictive data automatically, just like you can reconstruct an image from a subset of pixels if you can from those pixels extract the fourier transform of the image at large, which is highly structured, you can construct a global 'movie' of how the network is changing if you can extract the Wavlet coefficients for nearby nodes. please ask questions, that was a lot. 
 
+4. if we get this right.... could revolutionize wireless communication. no more servers and cell towers, at least in cities. 
+
 ### Scoring
 Stability
 Consistency (same as stability?)
