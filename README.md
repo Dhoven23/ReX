@@ -1,6 +1,6 @@
 ######################################
 
-Code Repo for ReX, (Rocket eXa-scale)
+Code Repo for ReX, (Robust eXa-scale computing)
 
 please do not use for real rockets
 
