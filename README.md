@@ -29,18 +29,25 @@ Open a terminal and run
 
 1. This is zoom worthy, I probably have like an hour worth of questions (can you say podcast content? i <3 audio editing). Four questions in paticular:
 
-a) Ergotic Models, what de heck is dat?
-b) How does a single node acting as an attractor benefit us over using an over cnn to find a solution relative to all nodes?
-c) Are we pinging recursively, or just pinging a simple list of all adjacent nodes and sticking to a radius = 1 per node simulation
-d) N > 2 sounds to me like a regression problem, but I'll probe your thinking with this:
-[YouTube.com: WayMo Cars Taking Over Quiet SF Dead End Street](https://www.youtube.com/watch?v=2sZnGdBm_fs)
-What does this video bring to mind (I see a park of a network in a 'topographical lull', a local low point in regression where a better point exists, but because so many waymo, (weymo?) cars have gone that way the collective solution has been reinforced to recognize that dead end as a 'high scoring' solution when they need to find an autonomous route in that area)
+    a) Ergotic Models, what de heck is dat?
+
+    b) How does a single node acting as an attractor benefit us over using an over cnn to find a solution relative to all nodes?
+
+    c) Are we pinging recursively, or just pinging a simple list of all adjacent nodes and sticking to a radius = 1 per node simulation
+
+    d) N > 2 sounds to me like a regression problem, but I'll probe your thinking with this:
+
+    [YouTube.com: WayMo Cars Taking Over Quiet SF Dead End Street](https://www.youtube.com/watch?v=2sZnGdBm_fs)
+
+    What does this video bring to mind (I see a park of a network in a 'topographical lull', a local low point in regression where a better point exists, but because so many waymo, (weymo?) cars have gone that way the collective solution has been reinforced to recognize that dead end as a 'high scoring' solution when they need to find an autonomous route in that area)
 
 2. Round 2 of questions:
 
-a) What is wavelet compression
-b) When increasing the frequency in connection to a node that's 'changing the most,' does the change in frecquency of connection correlate to a negative change in latency (a trend of decreasing latency) or does it always update when latency changes to account for both positive and negative increases. You know what, thinking aloud, I think it should be the latter!
-c) So we do use a global network controller! Sudden Outages, i.e non-continous breaks in outages are accounted for by a network supervisor, which handles threading / parallellization of a shared task across multiple nodes?
+    a) What is wavelet compression
+
+    b) When increasing the frequency in connection to a node that's 'changing the most,' does the change in frecquency of connection correlate to a negative change in latency (a trend of decreasing latency) or does it always update when latency changes to account for both positive and negative increases. You know what, thinking aloud, I think it should be the latter!
+
+    c) So we do use a global network controller! Sudden Outages, i.e non-continous breaks in outages are accounted for by a network supervisor, which handles threading / parallellization of a shared task across multiple nodes?
 
 
 3. A single questioneier a la fourier: is the whole goal of point number three to only make changes to nodes that have local changes, without the need to loop / regress through the whole network? I leik dis but I meight need some direction with what youtube videos to watch lawl.
