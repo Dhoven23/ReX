@@ -31,11 +31,15 @@ Open a terminal and run
 
     a) Ergotic Models, what de heck is dat?
     
-    >>> An Ergotic system is one with chaotic behavior. Like weather, or N body orbital mechanics. Definitionally, ergodicity is the measurement of how much effect difference in initial conditions has on trajectory. A gun isn't ergodic, a degree difference in initial firing angle results in a small and consistent deviation for the entire trajectory. however, for an ergodic system, a infinitesimal difference in initial conditions yields unpredictable difference in outcome. However, this is not random, like a stochastic system (throwing a die), rather there is an 'attractor' a pattern of solutions that 'pulls' initial conditions onto itself. A spiral galaxy is the finite time attractor to a self gravitating disc with initial angular momentum. Every solution is different, but you will always recogize what you are seeing as a galaxy. The world around you is built from attractors. you can always recognize what you are seeing, but no two solutions are exactly alike. 
+    >>> An Ergotic system is one with chaotic behavior. Like weather, or N body orbital mechanics. Definitionally, ergodicity is the measurement of how much effect difference in initial conditions has on trajectory. A gun isn't ergodic, a degree difference in initial firing angle results in a small and consistent deviation for the entire trajectory. however, for an ergodic system, a infinitesimal difference in initial conditions yields unpredictable difference in outcome. However, this is not random, like a stochastic system (throwing a die), rather there is an 'attractor' a pattern of solutions that 'pulls' initial conditions onto itself. A spiral galaxy is the finite time attractor to a self gravitating disc with initial angular momentum. Every solution is different, but you will always recogize what you are seeing as a galaxy. The world around you is built from attractors. you can always recognize what you are seeing, but no two solutions are exactly alike. our network will have solutions that have similarity, but local differences. these are the attractors of which i speak. 
 
     b) How does a single node acting as an attractor benefit us over using an over cnn to find a solution relative to all nodes?
 
+    >>> I did not suggest this, rather that having each node respnd to the system with defined behavior would automatically construct a neural network. if we get the rules right, it will converge on the best solution.
+
     c) Are we pinging recursively, or just pinging a simple list of all adjacent nodes and sticking to a radius = 1 per node simulation
+
+    >>> the pinging is to establish local distance, we ping nodes more frequently if they show as changing. 
 
     d) N > 2 sounds to me like a regression problem, but I'll probe your thinking with this:
 
@@ -43,16 +47,34 @@ Open a terminal and run
 
     What does this video bring to mind (I see a park of a network in a 'topographical lull', a local low point in regression where a better point exists, but because so many waymo, (weymo?) cars have gone that way the collective solution has been reinforced to recognize that dead end as a 'high scoring' solution when they need to find an autonomous route in that area)
 
+    >>> yes, this is a pitfal of reinforcement learning, However as long as your reward function is robust... and self correcting... Plus you need to kick the model every so often to shake out these bad rewards. 
+
 2. Round 2 of questions:
 
     a) What is wavelet compression
 
+    >>> https://www.youtube.com/watch?v=jclknhNJBrE
+
+    >>> https://www.youtube.com/watch?v=eJLF9HeZA8I
+
+    an extension of the Fourier transform that is far better suited to local discontinuities, like the borders between objects in an image. 
+
+
+
     b) When increasing the frequency in connection to a node that's 'changing the most,' does the change in frecquency of connection correlate to a negative change in latency (a trend of decreasing latency) or does it always update when latency changes to account for both positive and negative increases. You know what, thinking aloud, I think it should be the latter!
+
+    >>> you got it! basically this 'smart sorting' is the guts of how the network as a whole will 'learn'. Each node has a table of all other nodes with which it has connected. Every time a node joins the network we ping a random selection from a master table that just has the adress of every node with no additional information. we take the node with the lowest latency from this initial rando-pinging, and copy it's position in the network. with each subsequent connection, we can update the position. this way all the nodes will iteratively move to better and better positions, and each gaussian sampling serves to shock the network at large, pointing out any 'waymo' nodes. 
 
     c) So we do use a global network controller! Sudden Outages, i.e non-continous breaks in outages are accounted for by a network supervisor, which handles threading / parallellization of a shared task across multiple nodes?
 
+    >>> there will be some form of shared task scheduler, mainly to handle multiple jobs being requested in the same area of the network. basically it keeps track of 'busy' and 'free' nodes. We could add basic 'reboot' functionality here to reset certain misbehaving nodes, or recover from a nasty outage. 
+
 
 3. A single questioneier a la fourier: is the whole goal of point number three to only make changes to nodes that have local changes, without the need to loop / regress through the whole network? I leik dis but I meight need some direction with what youtube videos to watch lawl.
+
+    >>> exactly! if each node can see enough of the nearby network, it can 'move' itself to the ideal geometric location in the network. think of each node as a point on an elastic tarp. if you start with the points in arbitrary locations, the tarp will pull itself flat, moving all the nodes into their ideal position. this is a very poor analogy, because an elastic tarp has the geometry baked in, we need to discover the geometry. this is why we need wavelets, because they enable us to see how the tarp is moving, and guess what shape it's trying to spring back to. This is a very advanced use of wavelet compression, and I only know one YT video that even mentions it, and it's hardcore CFD. But I can definitely catch you up in person. 
+
+
 
 ## REPLY 11/12/2021
 
