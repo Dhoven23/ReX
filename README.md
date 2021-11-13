@@ -30,6 +30,8 @@ Open a terminal and run
 1. This is zoom worthy, I probably have like an hour worth of questions (can you say podcast content? i <3 audio editing). Four questions in paticular:
 
     a) Ergotic Models, what de heck is dat?
+    
+    >>> An Ergotic system is one with chaotic behavior. Like weather, or N body orbital mechanics. Definitionally, ergodicity is the measurement of how much effect difference in initial conditions has on trajectory. A gun isn't ergodic, a degree difference in initial firing angle results in a small and consistent deviation for the entire trajectory. however, for an ergodic system, a infinitesimal difference in initial conditions yields unpredictable difference in outcome. However, this is not random, like a stochastic system (throwing a die), rather there is an 'attractor' a pattern of solutions that 'pulls' initial conditions onto itself. A spiral galaxy is the finite time attractor to a self gravitating disc with initial angular momentum. Every solution is different, but you will always recogize what you are seeing as a galaxy. The world around you is built from attractors. you can always recognize what you are seeing, but no two solutions are exactly alike. 
 
     b) How does a single node acting as an attractor benefit us over using an over cnn to find a solution relative to all nodes?
 
