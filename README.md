@@ -32,7 +32,6 @@ to handle dynamic networks (a distributed system where a new node being added, a
 
 
 ## REPLY 11/12/2021
-I think you forgot to add some directories... server is missing on my end?
 
 1. I believe that the correct model for the data is not a global NN, but a dynamic one. each neuron in the NN only contains training data relevant to its local nodes. I think that a classical backpropogated CNN is not what will make this work. I would like to use an ergotic model that views the correct network config as an attractor, not a 'solution'. A reinforcement (reward/loss) genetic algorithm could work very well, since the training can be done with a simple ping command. Think of how the N > 2 body problem (ex: Sun, earth, moon) has several 'stable' solutions, and a zillion transient ones. the goal of the machine learning model is to converge upon a local solution to a globally chaotic system. rather than trying to find one orbit that stabilizes all 3+ bodies. I'm thinking out loud here.  
 
