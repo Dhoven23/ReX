@@ -1,3 +1,5 @@
+# THIS CODE DOES NOT WORK NOR IS IT INTENDED TO
+#
 import tensorflow as tf 
 import sys
 import numpy as np
@@ -42,9 +44,3 @@ class Node:
 			username = ID, 
 			password = password
 			)
-
-def main():
-	node = Node(0,'10.211.55.2','','')
-	node.connect('ubuntu','1234')
-	
-main()
