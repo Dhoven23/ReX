@@ -1,6 +1,6 @@
 import tensorflow as tf 
 import sys
-import Numpy as np
+import numpy as np
 import json
 from pythonping import ping
 from paramiko import SSHClient
@@ -13,7 +13,7 @@ class Node:
 	ipv6 = ''
 	dns = 2552552550
 	pingTime = 0
-	client = SSHCLient()
+	client = SSHClient()
 	isconnected = False
 	isbusy = False
 
@@ -25,18 +25,26 @@ class Node:
 		self.dns = dns
 		self.pingTime = ping(ipv4)
 
-	def update(self, ID, ipv4, ipv6, dns)
+	def update(self, ID, ipv4, ipv6, dns):
 
-		if(self.ID not ID):
+		if not (self.ID == ID):
 			self.ID = ID
-		if(self.ipv4 not ipv4):
+		if not (self.ipv4 == ipv4):
 			self.ipv4 = ipv4
-		if(self.ipv6 not ipv6):
+		if not (self.ipv6 == ipv6):
 			self.ipv6 = ipv6
-		if(self.dns not dns):
+		if not (self.dns == dns):
 			self.dns = dns
 		self.pingTime = ping(ipv4)
 
-	def connect(self, ipv4, ID, password)
-		self.client.connect(ipv4,username = ID, password = password)
+	def connect(self, ID, password):
+		self.client.connect(self.ipv4,
+			username = ID, 
+			password = password
+			)
 
+def main():
+	node = Node(0,'10.211.55.2','','')
+	node.connect('ubuntu','1234')
+	
+main()
